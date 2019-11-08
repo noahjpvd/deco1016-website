@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <!-- Links to glide.js library-->
+  <link rel="stylesheet" href="glidejs/dist/css/glide.core.min.css" type="text/css">
+  <link rel="stylesheet" href="glidejs/dist/css/glide.theme.min.css" type="text/css">
+
+  <!-- Link to custom stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+
+  <!-- Setup page for responsive design -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+  <title>SoundCloud - Sign Up</title>
+</head>
+
+<body>
+
+  <!-- Container for top navigation bar and links (some placeholders)-->
+  <nav>
+    <img id="logo" src="assets/logo.png" alt="logo">
+    <ul id="left-nav-links">
+      <li class="dropdown-link"><a href="index.html">Home</a></li>
+      <li class="dropdown-link"><a href="#">About</a></li>
+      <li class="dropdown-link"><a href="#">Sign In</a></li>
+      <li class="dropdown-link"><a href="signup.html">Sign Up</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main page content -->
+  <main>
+
+    <!-- Main carrousel container -->
+    <div class="glide">
+      <div class="glide__track" data-glide-el="track">
+
+        <!-- Unordered List container for slides -->
+        <ul class="glide__slides">
+
+          <!-- First Slide -->
+          <li class="glide__slide">
+
+            <!-- Main container for the first part of the form
+            and altervative sign in options -->
+            <section id="signup">
+              <h1>Account Setup</h1>
+
+              <!-- Main input form (continued on second slide) -->
+              <form action="index.html" method="post">
+
+                <!-- Container for main account credentials inputs -->
+                <!-- Used validate.js on-the-fly form validation method from class -->
+                <div id="signup-main">
+                  <div class="form-group">
+                    <input type="text" name="username" class="signup-info" placeholder="Username">
+                    <div class="messages"></div>
+                  </div>
+
+                  <div class="form-group">
+                    <input type="email" name="email" class="signup-info" placeholder="Email">
+                    <div class="messages"></div>
+                  </div>
+
+                  <div class="form-group">
+                    <input type="password" name="password" class="signup-info" placeholder="Password">
+                    <div class="messages"></div>
+                  </div>
+                </div>
+
+                <p>- Or -</p>
+
+                <!-- Alternate sign in option buttons (placeholders) -->
+                <div id="alt-signin">
+                  <a href="#">Sign in with Google</a>
+                  <a href="#">Sign in with Facebook</a>
+                </div>
+
+            </section>
+
+            <!-- More linear slide control for form navigation -->
+            <button type="button" name="continue" onclick="continueForm()">Continue</button>
+
+          </li>
+
+          <!-- Second Slide -->
+          <li class="glide__slide">
+
+            <!-- Main container for input grid and input counter -->
+            <span id="music-prefs-container">
+              <section id="music-prefs">
+                <h1>Music Preferences</h1>
+
+                <!-- Input grid of custom styled checkboxes
+                (actual checkbox elements hidden - uses styled <span> element for display) -->
+                <div id="mpref-grid">
+                  <label>
+                    <input type="checkbox" name="music-pref" class="music-pref" value="Pop">
+                    <span>Pop</span>
+                  </label>
+                  <label>
+                    <input type="checkbox" name="music-pref" class="music-pref" value="Electronic">
+                    <span>Electronic</span>
+                  </label>
+                  <label>
+                    <input type="checkbox" name="music-pref" class="music-pref" value="Rap">
+                    <span>Rap</span>
+                  </label>
+                  <label>
+                    <input type="checkbox" name="music-pref" class="music-pref" value="Dance">
+                    <span>Dance</span>
+                  </label>
+                  <label>
+                    <input type="checkbox" name="music-pref" class="music-pref" value="Funk">
+                    <span>Funk</span>
+                  </label>
+                  <label>
+                    <input type="checkbox" name="music-pref" class="music-pref" value="Rock">
+                    <span>Rock</span>
+                  </label>
+                  <label>
+                    <input type="checkbox" name="music-pref" class="music-pref" value="EDM">
+                    <span>EDM</span>
+                  </label>
+                  <label>
+                    <input type="checkbox" name="music-pref" class="music-pref" value="Indie">
+                    <span>Indie</span>
+                  </label>
+                  <label>
+                    <input type="checkbox" name="music-pref" class="music-pref" value="Metal">
+                    <span>Metal</span>
+                  </label>
+                  <label>
+                    <input type="checkbox" name="music-pref" class="music-pref" value="Jazz">
+                    <span>Jazz</span>
+                  </label>
+                  <label>
+                    <input type="checkbox" name="music-pref" class="music-pref" value="Soundtracks">
+                    <span>Soundtracks</span>
+                  </label>
+                  <label>
+                    <input type="checkbox" name="music-pref" class="music-pref" value="Classical">
+                    <span>Classical</span>
+                  </label>
+                </div>
+
+                <!-- Input counter (text modified with javascript) -->
+                <h2 id="mpref-counter">Select your music preferences (Optional)</h2>
+
+              </section>
+            </span>
+
+            <!-- Container for form submit button and page back button
+            (forward button not funtional) -->
+            <span id="signup-finish-bottom">
+              <img class="carousel-prev" src="assets/prev.png" alt="prev">
+              <div class="form-group">
+                <button type="submit" name="continue">Finish</button>
+              </div>
+              <img class="carousel-next" src="assets/next.png" alt="next">
+            </span>
+
+            </form>
+          </li>
+
+          <!-- Third Slide -->
+          <li class="glide__slide">
+
+            <!-- Container for endcard and account creation confirmation -->
+            <section id="signup-end">
+              <h1>Account Created Successfully</h1>
+              <div id="end-text">
+                <img src="assets/verified.png" alt="checkmark">
+                <ul>
+                  <li>Save tracks, follow artists and build playlists.</li>
+                  <li>Upload your first track and begin your journey.</li>
+                </ul>
+              </div>
+            </section>
+
+            <!-- Link to continue to full website (placeholder) -->
+            <a id="cfa-button" href="#">Start Listening</a>
+
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Container for footer section and links (placeholders) -->
+  <footer>
+
+    <!-- Left side links -->
+    <ul>
+      <li><a href="#">Popular Searches</a></li>
+      <li><a href="#">Download SoundCloud</a></li>
+      <li><a href="#">Help</a></li>
+    </ul>
+
+    <!-- Right side links -->
+    <ul>
+      <li><a href="#">Language</a></li>
+    </ul>
+
+  </footer>
+
+</body>
+
+<!-- Link to glide.js library script -->
+<script type="text/javascript" src="glidejs/dist/glide.min.js"></script>
+
+<!-- Inline script for mounting carousel to page with custom settings-->
+<script>
+  glide = new Glide(".glide", {
+    keyboard: false,
+    rewind: false,
+    swipeThreshold: false,
+    dragThreshold: false,
+    animationDuration: 700
+  });
+  glide.mount();
+</script>
+
+<!-- Link to validate.js library script -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+
+<!-- Link to custom script to implement form validation,
+music preferences input counter, carousel custom controls -->
+<script type="text/javascript" src="signup-script.js"></script>
+
+</html>

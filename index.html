@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <!-- Links to glide.js library-->
+  <link rel="stylesheet" href="glidejs/dist/css/glide.core.min.css" type="text/css">
+  <link rel="stylesheet" href="glidejs/dist/css/glide.theme.min.css" type="text/css">
+
+  <!-- Link to custom stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+
+  <!-- Setup page for responsive design -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+  <title>SoundCloud - Homepage</title>
+</head>
+
+<body>
+
+  <!-- Container for top navigation bar and links (some placeholders)-->
+  <nav>
+    <img id="logo" src="assets/logo.png" alt="logo">
+    <ul id="left-nav-links">
+      <li class="dropdown-link"><a href="index.html">Home</a></li>
+      <li class="dropdown-link"><a href="#">About</a></li>
+      <li class="dropdown-link"><a href="#">Sign In</a></li>
+      <li class="dropdown-link"><a href="signup.html">Sign Up</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main page content -->
+  <main>
+
+    <!-- Top Searchbar -->
+    <input id="searchbar" type="text" name="search" placeholder="Search for artists, bans, tracks, podcasts">
+
+    <!-- Main carrousel container -->
+    <div class="glide">
+      <div class="glide__track" data-glide-el="track">
+
+        <!-- Unordered List container for slides -->
+        <ul class="glide__slides">
+
+          <!-- First Slide -->
+          <li class="glide__slide">
+            <section id="slide-1">
+              <h1>What's next in music... is first on SoundCloud</h1>
+
+              <!-- Inline container for main image and carousel controls -->
+              <span>
+                <img class="carousel-prev" src="assets/prev.png" alt="prev">
+                <img class="main-img" src="assets/images/singer-guitar.jpg" alt="main image">
+                <img class="carousel-next" src="assets/next.png" alt="next">
+              </span>
+
+              <!-- Call for action button -->
+              <a id="cfa-button" href="signup.html">Create Account</a>
+            </section>
+          </li>
+
+          <!-- Second Slide -->
+          <li class="glide__slide">
+
+            <!-- Inline container for main image and carousel controls and text area -->
+            <section id="slide-2">
+              <img class="carousel-prev" src="assets/prev.png" alt="prev">
+              <img class="main-img" src="assets/images/audio-gear.jpg" alt="main image">
+
+              <!-- Container for aside text area -->
+              <div id="aside-2">
+                <h1>Never stop listening</h1>
+                <p>SoundCloud is available on Web, iOS, Android, Sonos, Chromecast and Xbox One.</p>
+
+                <!-- Download buttons for different platforms (placeholders) -->
+                <div id="dl-buttons">
+                  <a href="#" class="dl-button">App Store</a>
+                  <a href="#" class="dl-button">Google Play Store</a>
+                </div>
+              </div>
+
+              <img class="carousel-next" src="assets/next.png" alt="next">
+            </section>
+
+          </li>
+
+          <!-- Third Slide -->
+          <li class="glide__slide">
+            <section id="slide-3">
+              <h1>Hear what's trending for free in the SoundCloud community</h1>
+
+              <!-- Inline container for grid of cover artworks and carousel controls-->
+              <span>
+                <img class="carousel-prev" src="assets/prev.png" alt="prev">
+                <div>
+
+                  <!-- Grid of images split into rows -->
+                  <div id="album-grid">
+                    <div class="album-row">
+                      <img class="artwork" src="assets/images/neon-scarf.jpg" alt="image">
+                      <img class="artwork" src="assets/images/screaming-b&w.jpg" alt="image">
+                      <img class="artwork" src="assets/images/green-scaffold.jpg" alt="image">
+                      <img class="artwork" src="assets/images/pink-corridor.jpg" alt="image">
+                    </div>
+                    <div class="album-row">
+                      <img class="artwork" src="assets/images/hand-water.jpg" alt="image">
+                      <img class="artwork" src="assets/images/table-hipster.jpg" alt="image">
+                      <img class="artwork" src="assets/images/red-smoke.jpg" alt="image">
+                      <img class="artwork" src="assets/images/blindfold-beach.jpg" alt="image">
+                    </div>
+                  </div>
+
+                </div>
+                <img class="carousel-next" src="assets/next.png" alt="next">
+              </span>
+
+              <!-- Call for action button -->
+              <a id="cfa-button" href="#">Explore</a>
+
+            </section>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+  </main>
+
+
+  <!-- Container for footer section and links (placeholders) -->
+  <footer>
+
+    <!-- Left side links -->
+    <ul>
+      <li><a href="#">Popular Searches</a></li>
+      <li><a href="#">Download SoundCloud</a></li>
+      <li><a href="#">Help</a></li>
+    </ul>
+
+    <!-- Right side links -->
+    <ul>
+      <li><a href="#">Language</a></li>
+    </ul>
+
+  </footer>
+
+</body>
+
+<!-- Link to glide.js library script -->
+<script type="text/javascript" src="glidejs/dist/glide.min.js"></script>
+
+<!-- Inline script for mounting carousel to page with custom settings-->
+<script>
+  glide = new Glide(".glide", {
+    type: "carousel",
+    animationDuration: 700
+  });
+  glide.mount();
+</script>
+
+<!-- Custom script for adding event listeners to custom carousel controls
+  (glide.js defaults were buggy and not easily customisable) -->
+<script type="text/javascript" src="main-script.js"></script>
+
+</html>

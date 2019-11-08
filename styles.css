@@ -1,0 +1,732 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  font-family: "Roboto-Light";
+}
+
+/* Set background */
+body {
+  background: rgb(255, 190, 0);
+  background: radial-gradient(circle, rgba(255, 190, 0, 1) 0%, rgba(235, 86, 0, 1) 100%);
+  background-size: cover;
+}
+
+/* Remove default styling to links */
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* Navigation bar color, layout, spacing and link animations */
+nav {
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+nav * {
+  list-style-type: none;
+  display: flex;
+}
+
+#left-nav-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#left-nav-links a {
+  margin: 0 24px 3px 0;
+}
+
+#left-nav-links a:hover {
+  color: black;
+  transition: color 0.5s;
+}
+
+#logo {
+  max-height: 20px;
+  padding: 15px 20px 17px 20px;
+}
+
+/* Set default height of main content */
+main {
+  min-height: 100vh;
+}
+
+/* Remove coloring of default visited page links */
+main a:visited {
+  color: #000000;
+}
+
+/* Set serachbar color, shape and sizing */
+#searchbar {
+  background-color: #ffffff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  display: block;
+  margin: 40px auto 0;
+  width: 70vw;
+  padding: 15px 30px;
+  border-radius: 30px;
+  border: 4px solid #ffffff;
+  transition: border 0.5s;
+}
+
+/* Change searchbar border when in use */
+#searchbar:focus {
+  border: 4px solid #dddddd;
+  transition: 0.5s;
+}
+
+/* Default spacing for slides */
+.glide section {
+  padding: 20px 50px;
+  margin-bottom: 30px;
+  width: 100vw;
+}
+
+/* Flexbox layout for slides */
+.glide__slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+/* Carousel controls sizing and animation */
+.carousel-prev, .carousel-next {
+  width: 40px;
+  height: 40px;
+  margin: 30px;
+  transition: 0.5s;
+}
+
+.carousel-prev:hover {
+  transform: translateX(-10px);
+  transition: 0.5s;
+}
+
+.carousel-next:hover {
+  transform: translateX(10px);
+  transition: 0.5s;
+}
+
+#slide-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header text styles */
+#slide-1 h1, #slide-3 h1 {
+  font-size: 3em;
+  font-family: "Roboto-Light";
+  font-weight: lighter;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#slide-1 span {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main image sizing */
+#slide-1 .main-img {
+  width: 65vw;
+  margin: 30px 0;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Styles for "Call for action" and "continue" buttons */
+#cfa-button, #cfa-button:visited, button[name="continue"], button[name="continue"]:visited {
+  text-align: center;
+  font-size: 1.5em;
+  background-color: #ffffff;
+  transition: 0.5s;
+  width: 230px;
+  padding: 10px 13px 12px 13px;
+  border-radius: 30px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Animations for "Call for action" and "continue" buttons */
+#cfa-button:hover, button[name="continue"]:hover {
+  background-color: #00c22d;
+  color: #ffffff;
+  transition: 0.5s;
+}
+
+#cfa-button:active, button[name="continue"]:active {
+  background-color: #000000;
+  color: #ffffff;
+  transition: 0.5s;
+}
+
+#slide-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main image sizing */
+#slide-2 .main-img {
+  margin: 30px 0;
+  width: 31vw;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Flexbox layout for aside content */
+#aside-2 {
+  padding-left: 35px;
+  width: 40vw;
+  margin: auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* Header text styles */
+#slide-2 h1 {
+  font-size: 3em;
+  font-family: "Roboto-Light";
+  font-weight: lighter;
+  text-align: left;
+}
+
+#slide-2 p {
+  margin-top: 20px;
+  font-size: 1.2em;
+  font-family: "Roboto-Light";
+  font-weight: lighter;
+}
+
+/* Flexbox layout for download buttons */
+#dl-buttons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+/* Styles and animations for download buttons */
+.dl-button, .dl-button:visited {
+  text-align: center;
+  font-size: 1.2em;
+  background-color: #000000;
+  transition: 0.5s;
+  color: #ffffff;
+  width: 230px;
+  padding: 10px 13px 12px 13px;
+  border-radius: 7px;
+  margin: 20px 20px 0 0;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.dl-button:hover {
+  background-color: #ffffff;
+  color: #ff6a00;
+  transition: 0.5s;
+}
+
+.dl-button:active {
+  background-color: #dddddd;
+}
+
+#slide-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#slide-3 span {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+/* Layout for image grid on 3rd slide */
+#album-grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.album-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Cover artwork images sizing */
+.artwork {
+  width: 12vw;
+  border-radius: 10px;
+  margin: 20px 10px 0 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  border-radius: 7%;
+}
+
+/* Cover artwork images animations */
+.artwork:hover {
+  transform: scale(0.95);
+  transition: 0.5s;
+}
+
+.artwork:active {
+  transform: scale(0.90);
+  transition: 0.5s;
+}
+
+#explore-button {
+  text-align: center;
+  font-size: 1.5em;
+  width: 100px;
+  background-color: #ffffff;
+  padding: 10px 13px 12px 13px;
+  border-radius: 30px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Main signup slide layout and styles */
+#signup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  padding: 20px;
+  border-radius: 7px;
+  width: 400px;
+  max-width: 90vw;
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.glide__slide h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #000000;
+  font-size: 3em;
+  font-family: "Roboto-Light";
+  font-weight: lighter;
+  margin-bottom: 20px;
+}
+
+#signup form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#signup-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* Main inputs spacing and colors */
+#signup-main input {
+  background-color: #dddddd;
+  margin: 5px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  width: 250px;
+  transition: 0.5s;
+}
+
+/* Main inputs animations */
+#signup-main input:focus {
+  background-color: #ffffff;
+  transition: 0.5s;
+}
+
+#signup-main input:hover {
+  background-color: #ffffff;
+  transition: 0.5s;
+}
+
+#signup-main input:not(:placeholder-shown) {
+  background-color: #ffffff;
+}
+
+/* Input validation styles for validate.js integration */
+form .messages {
+  flex: 0 0 100%;
+  text-align: right;
+  padding: 5px 0;
+  color: #ff6361;
+}
+
+form .form-group.has-error input {
+  border: 2px solid #ff6361;
+}
+
+form .form-group.has-success input {
+  border: 2px solid #41a765;
+}
+
+/* Alternate signup buttons color and spacing */
+#alt-signin {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#alt-signin a {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  background-color: #03b6fc;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 10px;
+  width: 250px;
+  transition: 0.5s;
+}
+
+/* Alternate signup buttons animation */
+#alt-signin a:hover {
+  color: #ffffff;
+  transition: 0.5s;
+}
+
+#music-prefs-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hide disabled carousel "next" button */
+#signup-finish-bottom .carousel-next {
+  visibility: hidden;
+}
+
+/* Music preferences inputs container layout */
+#music-prefs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0 30px;
+  padding: 20px;
+  border-radius: 7px;
+  width: 700px;
+  max-width: 90vw;
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+/*  */
+#mpref-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Checkbox custom styling */
+/* Hide checkbox input elements */
+#mpref-grid label input {
+  position: absolute;
+  top: -100px;
+}
+
+/* Colors for individual inputs <span> elements */
+#mpref-grid input[value="Pop"]+span {
+  background-color: #00a331;
+  border: 3px solid #00a331;
+  color: #ffffff;
+}
+
+#mpref-grid input[value="Electronic"]+span {
+  background-color: #ed3b69;
+  border: 3px solid #ed3b69;
+}
+
+#mpref-grid input[value="Rap"]+span {
+  background-color: #5c7fff;
+  border: 3px solid #5c7fff;
+}
+
+#mpref-grid input[value="Dance"]+span {
+  background-color: #d84dff;
+  border: 3px solid #d84dff;
+}
+
+#mpref-grid input[value="Funk"]+span {
+  background-color: #ffb029;
+  border: 3px solid #ffb029;
+}
+
+#mpref-grid input[value="Rock"]+span {
+  background-color: #9819ff;
+  border: 3px solid #9819ff;
+  color: #ffffff;
+}
+
+#mpref-grid input[value="EDM"]+span {
+  background-color: #fcfc1c;
+  border: 3px solid #fcfc1c;
+}
+
+#mpref-grid input[value="Indie"]+span {
+  background-color: #52ff86;
+  border: 3px solid #52ff86;
+}
+
+#mpref-grid input[value="Metal"]+span {
+  background-color: #404040;
+  border: 3px solid #404040;
+  color: #ffffff;
+}
+
+#mpref-grid input[value="Jazz"]+span {
+  background-color: #66bffa;
+  border: 3px solid #66bffa;
+}
+
+#mpref-grid input[value="Soundtracks"]+span {
+  background-color: #ad0065;
+  border: 3px solid #ad0065;
+  color: #ffffff;
+}
+
+#mpref-grid input[value="Classical"]+span {
+  background-color: #17ebb2;
+  border: 3px solid #17ebb2;
+}
+
+/* Spacing and sizing for inputs <span> elements */
+#mpref-grid input+span {
+  font-size: 120%;
+  text-align: center;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  height: 80px;
+  width: 190px;
+  transition: 0.3s;
+}
+
+/* Animations for inputs <span> elements */
+#mpref-grid input:checked+span {
+  border: 3px solid #ffffff;
+  transition: 0.3s;
+}
+
+#mpref-grid input:hover+span {
+  transform: scale(0.95);
+  transition: 0.3s;
+}
+
+#mpref-grid input:active+span {
+  transform: scale(0.90);
+  transition: 0.3s;
+}
+
+#music-prefs h2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #000000;
+  font-size: 1em;
+  font-family: "Roboto-Light";
+  font-weight: lighter;
+  margin: 10px;
+}
+
+/* Confirmation endcard sizing and spacing */
+#signup-end {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  padding: 20px;
+  border-radius: 7px;
+  width: 400px;
+  max-width: 90vw;
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+#signup-back-button {
+  opacity: 0;
+  transition: 0.2s;
+}
+
+#signup-finish-bottom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#end-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+#end-text img {
+  width: 100px;
+  height: 100px;
+  margin: 30px;
+}
+
+#end-text ul {
+  list-style-type: circle;
+  margin: 20px 0 20px 10px;
+}
+
+/* Footer colors and flexbox layout for links */
+footer {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 150px;
+  padding: 16px 0;
+}
+
+footer * {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+}
+
+footer a {
+  padding: 7px 30px;
+  transition: 0.5s;
+}
+
+footer a:hover {
+  color: #eb9600;
+  transition: 0.5s;
+}
+
+/* Media queries for responsive elements */
+/* For mobile and smaller*/
+@media only screen and (max-width: 768px) {
+
+  /* Hide carousel controls on main page */
+  #slide-1 .carousel-prev,
+  #slide-2 .carousel-prev,
+  #slide-3 .carousel-prev,
+  #slide-1 .carousel-next,
+  #slide-2 .carousel-next,
+  #slide-3 .carousel-next {
+    display: none;
+  }
+
+  /* Adjust spacing on signup page */
+  #signup-finish-bottom .carousel-prev,
+  #signup-finish-bottom .carousel-next {
+    margin: 10px;
+  }
+
+  /* Resize images */
+  #slide-1 .main-img {
+    width: 90vw;
+  }
+
+  #slide-2 .main-img {
+    width: 80vw;
+    position: relative;
+  }
+
+  /* Adjust layout and spacing */
+  #slide-2 {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #aside-2 {
+    align-items: flex-start;
+    justify-content: center;
+    width: 80vw;
+    padding: 0;
+  }
+
+  .dl-buttons {
+    justify-content: space-between;
+  }
+
+  #album-grid {
+    margin: 20px;
+  }
+
+  .artwork {
+    width: 18vw;
+    margin: 7px;
+  }
+}
+
+/* For smartphone and smaller */
+@media only screen and (max-width: 425px) {
+
+  /* Adjust spacing */
+  #slide-1, #slide-2, #slide-3 {
+    width: 100vw;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  /* Resize text */
+  #slide-1 h1, #slide-2 h1, #slide-3 h1 {
+    font-size: 1.7em;
+    text-align: center;
+  }
+
+  #left-nav-links a {
+    margin: 0 20px 3px 0;
+  }
+}
+
+/* For smallest smartphones */
+@media only screen and (max-width: 320px) {
+
+  /* Adjust spacing and font sizes for nav links */
+  #left-nav-links a {
+    margin: 0 18px 3px 0;
+    font-size: 0.8em
+  }
+}
